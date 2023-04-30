@@ -1,3 +1,4 @@
+#pragma once 
 #include <SFML/Graphics.hpp>
 
 namespace Game
@@ -5,11 +6,12 @@ namespace Game
     class Player
     {
         private: 
-            sf::RectangleShape rectangle; 
+            sf::RectangleShape player_shape; 
         public:
             Player();
 
             sf::RectangleShape getPlayer(); 
+            void movePlayer(const double &x_velocity, const double &y_velocity); 
     };
        
 } 

@@ -1,21 +1,13 @@
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#include "game-core/player.hpp"
+#include "game-core/movement.hpp"
 
 int main()
 {
-
-    
     // auto fullscreen = sf::VideoMode::getDesktopMode(); 
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "gameX");
 
     Game::Player player1; 
-    // sf::RectangleShape player_shape = player1.getPlayer(); 
-
-    auto x_pos = player1.getPlayer().getPosition().x;
-    std::cout << "x_pos: " << x_pos << std::endl; 
-    
 
     while (window.isOpen())
     {
@@ -25,10 +17,14 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        
+
+
+        player1.movePlayer(0.1,0); 
+
         window.clear();
         window.draw(player1.getPlayer()); 
         window.display();
+
     }
 
     return 0;

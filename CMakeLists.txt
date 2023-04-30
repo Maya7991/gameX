@@ -9,6 +9,8 @@ add_executable(main src/main.cpp)
 add_library(core SHARED 
     src/game-core/player.hpp
     src/game-core/player.cpp
+    src/game-core/movement.hpp
+    src/game-core/movement.cpp
 )
 
 
