@@ -6,13 +6,16 @@ int main()
 {
 
     
-    auto fullscreen = sf::VideoMode::getDesktopMode(); 
+    // auto fullscreen = sf::VideoMode::getDesktopMode(); 
 
-    sf::RenderWindow window(sf::VideoMode(fullscreen.width, 
-			    fullscreen.height, 
-			    fullscreen.bitsPerPixel), "gameX");
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "gameX");
 
-    // Game::Player player1; 
+    Game::Player player1; 
+    // sf::RectangleShape player_shape = player1.getPlayer(); 
+
+    auto x_pos = player1.getPlayer().getPosition().x;
+    std::cout << "x_pos: " << x_pos << std::endl; 
+    
 
     while (window.isOpen())
     {
@@ -23,9 +26,8 @@ int main()
                 window.close();
         }
         
-        // window.draw(player1.getPlayer());
-
         window.clear();
+        window.draw(player1.getPlayer()); 
         window.display();
     }
 
