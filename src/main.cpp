@@ -1,10 +1,18 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include "game-core/player.hpp"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+
+    
+    auto fullscreen = sf::VideoMode::getDesktopMode(); 
+
+    sf::RenderWindow window(sf::VideoMode(fullscreen.width, 
+			    fullscreen.height, 
+			    fullscreen.bitsPerPixel), "gameX");
+
+    // Game::Player player1; 
 
     while (window.isOpen())
     {
@@ -14,9 +22,10 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        
+        // window.draw(player1.getPlayer());
 
         window.clear();
-        window.draw(shape);
         window.display();
     }
 
