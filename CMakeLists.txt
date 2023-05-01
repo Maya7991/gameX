@@ -11,6 +11,8 @@ add_library(core SHARED
     src/game-core/player.cpp
     src/game-core/movement.hpp
     src/game-core/movement.cpp
+    src/game-core/window.hpp
+    src/game-core/window.cpp
 )
 
 

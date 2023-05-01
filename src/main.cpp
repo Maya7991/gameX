@@ -18,8 +18,7 @@ int main()
                 window.close();
         }
 
-
-        player1.movePlayer(0.1,0); 
+        Game::Movement::keyboardInput(player1); 
 
         window.clear();
         window.draw(player1.getPlayer()); 
