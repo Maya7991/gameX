@@ -1,30 +1,11 @@
 #include <SFML/Graphics.hpp>
-#include "game-core/movement.hpp"
+#include "game-core/player.hpp"
+#include "game-core/window.hpp"
 
 int main()
 {
-    // auto fullscreen = sf::VideoMode::getDesktopMode(); 
-
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "gameX");
-
-    Game::Player player1; 
-
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        Game::Movement::keyboardInput(player1); 
-
-        window.clear();
-        window.draw(player1.getPlayer()); 
-        window.display();
-
-    }
-
+    
+    Game::Window::run(); 
     return 0;
+
 }

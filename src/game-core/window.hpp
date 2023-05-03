@@ -1,4 +1,7 @@
+
 #include <SFML/Graphics.hpp>
+#include "player.hpp"
+#include "movement.hpp"
 
 namespace Game
 {
