@@ -3,17 +3,13 @@
 #include "player.hpp"
 #include "movement.hpp"
 
-namespace Game
+class Window 
 {
-   class Window 
-   {
-        private: 
+      private: 
 
-        public:
-            static double horizontal_resolution; 
-            static double vertical_resolution;  
-            static void run();
-             
-
-   }; 
-} 
+      public:
+         static double horizontal_resolution; 
+         static double vertical_resolution;  
+         static void run();
+         
+}; 

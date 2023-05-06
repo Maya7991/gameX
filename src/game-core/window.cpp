@@ -1,13 +1,13 @@
 #include "window.hpp"
 
-void Game::Window::run()
+void Window::run()
 {
 
-    sf::RenderWindow window(sf::VideoMode(1280, 
-                                          720), 
+    sf::RenderWindow window(sf::VideoMode(horizontal_resolution, 
+                                          vertical_resolution), 
                                           "gameX");
 
-    Game::Player player1; 
+    Player player1; 
 
     while (window.isOpen())
     {
@@ -18,7 +18,7 @@ void Game::Window::run()
                 window.close();
         }
 
-        Game::Movement::keyboardInput(player1); 
+        Movement::keyboardInput(player1); 
 
         window.clear();
         window.draw(player1.getPlayer()); 
@@ -26,7 +26,5 @@ void Game::Window::run()
 
     }
 
-
-    
 
 }

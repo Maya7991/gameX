@@ -1,7 +1,7 @@
 #include "player.hpp"
 #include <iostream>
 
-Game::Player::Player() 
+Player::Player() 
 {
 
     player_shape.setSize(sf::Vector2f(100, 100));
@@ -10,14 +10,14 @@ Game::Player::Player()
 
 }; 
 
-sf::RectangleShape Game::Player::getPlayer()
+sf::RectangleShape Player::getPlayer()
 {
 
     return player_shape; 
 
 }
 
-void Game::Player::movePlayer(const double &x_velocity, const double &y_velocity)
+void Player::movePlayer(const double &x_velocity, const double &y_velocity)
 {
     sf::Vector2f position = player_shape.getPosition(); 
     position.x += x_velocity; 
