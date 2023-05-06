@@ -7,7 +7,7 @@ class Player
         sf::RectangleShape player_shape; 
     public:
         Player();
-        sf::RectangleShape getPlayer(); 
+        sf::RectangleShape getPlayerShape(); 
         void movePlayer(const double &x_velocity, const double &y_velocity); 
 };
        

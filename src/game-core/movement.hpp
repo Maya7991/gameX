@@ -5,8 +5,10 @@
 class Movement
 {
 
+    private: 
+        static const double m_speed; 
+
     public:
         static void keyboardInput(Player &player) ; 
-        static const double speed; 
 }; 
         

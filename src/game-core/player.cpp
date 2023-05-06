@@ -10,7 +10,7 @@ Player::Player()
 
 }; 
 
-sf::RectangleShape Player::getPlayer()
+sf::RectangleShape Player::getPlayerShape()
 {
 
     return player_shape; 
